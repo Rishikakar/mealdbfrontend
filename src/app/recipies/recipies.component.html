@@ -1,0 +1,110 @@
+<app-header></app-header>
+<div class="container">
+    <div class="center">
+
+        <table style="width:100%">
+            <tbody>
+                <tr>
+                    <td style="width:35%">
+                        <h2>
+                            {{this.mealName}}<br><br> </h2>
+                    </td>
+                    <td style="width:60%">
+                        <h2>
+                            Ingredients<br><br> </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:35%; vertical-align:top;">
+                        <img src="{{mealImageUrl}}" style="width:100%">
+                        <br><br>
+
+                        <a routerLink="mealdb/recipies"><img src="https://www.themealdb.com/images/icons/6.png" style="width:30%"></a>
+                        <a routerLink="mealdb/recipies"><img src="https://www.themealdb.com/images/icons/5.png" style="width:30%"></a><br>
+                    </td>
+                    <!-- 2nd column start -->
+                    <td style="width:60%; vertical-align:top;">
+                        <table style="width:100%">
+                            <tbody>
+                                <tr>
+
+
+                                    <td align="center">
+
+                                        <figure>
+                                            <img src="{{subIngredientOneUrl}}" style="width:80%">
+                                            <figcaption>{{subIngredientOne}}</figcaption>
+                                        </figure>
+
+                                    </td>
+                                    <td align="center">
+
+                                        <figure>
+                                            <img src="{{subIngredientTwoUrl}}" style="width:80%">
+                                            <figcaption>{{subIngredientTwo}}</figcaption>
+                                        </figure>
+
+                                    </td>
+                                    <td align="center">
+
+                                        <figure>
+                                            <img src="{{subIngredientThreeUrl}}" style="width:80%">
+                                            <figcaption>{{subIngredientThree}}</figcaption>
+                                        </figure>
+
+                                    </td>
+                                    <td align="center">
+
+                                        <figure>
+                                            <img src="{{subIngredientFourUrl}}" style="width:80%">
+                                            <figcaption>{{subIngredientFour}}</figcaption>
+                                        </figure>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+
+                                        <figure>
+                                            <img src="{{subIngredientFiveUrl}}" style="width:80%">
+                                            <figcaption>{{subIngredientFive}}</figcaption>
+                                        </figure>
+
+                                    </td>
+                                    <td align="center">
+
+                                        <figure>
+                                            <img src="{{subIngredientSixUrl}}" style="width:80%">
+                                            <figcaption>{{subIngredientSix}}</figcaption>
+                                        </figure>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+
+
+        <div class="row">
+            <div class="col-lg-3">
+                <h2 class="primary-text">Main Ingredient</h2><br>
+                <a routerLink="/mealdb/ingredients/{{mainIngredientsId}}">
+                    <figure> <img src="{{mainIngredientImageUrl}}" width="200" height="200"> </figure>
+                </a>
+            </div>
+
+            <div>
+                <h2>Instructions</h2>
+                {{mealDescription}}
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>

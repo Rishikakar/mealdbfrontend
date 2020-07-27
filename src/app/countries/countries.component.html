@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container">
+    <div class="center">
+        <hr>
+        <h3 align="center" class="text-primary">Our Popular Recipies in {{countryName}}</h3>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3" *ngFor="let item of meal">
+                <a href=""></a>
+                <a routerLink="mealdb/recipies/{{item[1]}}"><img src="{{item[2]}}" width="200"> <br>{{item[0]}}</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2 align="left" class="text-primary">About {{countryName}}</h2>
+    <hr>
+    <h5>{{countryDescription}}...</h5>
+</div>

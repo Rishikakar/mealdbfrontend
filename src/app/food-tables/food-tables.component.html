@@ -1,0 +1,28 @@
+<div>
+    <table width="400" align="center">
+        <tbody>
+            <tr>
+                <td>
+                    <form [formGroup]="searchform" class="navbar-form">
+                        <div class="input-group">
+                            <input type="text" name="s" class="form-control" formControlName="SearchKeyWord" autocomplete="off" placeholder="Search for a Meal...">
+                            <div class="input-group-btn">
+                                <button mat-raised-button color="primary" class="btn btn-outline-primary" (click)="search()">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="https://themealdb.com/images/transparent.png" width="10" height="1">
+                <img src="https://themealdb.com/images/icons/meal-icon6.png"> <b>Total Meals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>{{MealNumber}}
+            </tr>
+            <tr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="https://themealdb.com/images/transparent.png" width="10" height="1">
+                <img src="https://themealdb.com/images/icons/meal-icon4.png"> <b>Total Ingredients: </b>{{IngredientNumber}}
+            </tr>
+        </tbody>
+    </table>
+</div>
