@@ -11,7 +11,7 @@ export class MealserviceService {
   constructor(private http:HttpClient) { }
   login(data):Observable<any>
   {
-    return this.http.post("https://localhost:44391/api/meals/login",data);
+    return this.http.post("https://mealdbproject.azurewebsites.net/api/meals/login",data);
   }
   register(data):Observable<any>
   {
