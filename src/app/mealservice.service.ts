@@ -7,8 +7,16 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MealserviceService {
+  count = true;
 
   constructor(private http:HttpClient) { }
+ 
+     isLogedIn(data)
+  {
+    this.count = data;
+    return this.count;
+  }
+    
   postMeal(data):Observable<any>{
     return this.http.post("https://mealdbproject.azurewebsites.net/api/meals/AdminInputForMeals",data);
   }

@@ -47,7 +47,14 @@ export class AdminComponent implements OnInit {
     this.service.postMeal(data).subscribe((data)=>{console.log(data)},(error)=>{},()=>{});
     //alert("Upadated successfully on db..")
 
+  
   }
+  logout()
+  {
+    window.localStorage.removeItem("user-token"); 
+    this.route.navigate(['mealdb']); 
+  }
+
 
  
  

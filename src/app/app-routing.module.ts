@@ -9,6 +9,8 @@ import { CountriesComponent } from './countries/countries.component';
 import { IndexComponent } from './index/index.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { SearchmealbyfirstletterComponent } from './searchmealbyfirstletter/searchmealbyfirstletter.component';
+import { AdminComponent } from './admin/admin.component';
+import { AuthguardGuard} from './authguard.guard'
 
 
 const routes: Routes = [
@@ -28,6 +30,11 @@ const routes: Routes = [
   {
     path:"mealdb/recipies/:id",
     component:RecipiesComponent
+  },
+  {
+    path:"mealdb/adminform",
+    component:AdminComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:"mealdb/ingredients/:id",

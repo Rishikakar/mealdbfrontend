@@ -25,9 +25,17 @@ export class LoginComponent implements OnInit {
     this.service.login(this.userform.value).subscribe((data)=>{console.log(data);
       if(data)
       {
+       // console.log(this.userform.controls.LoginEmailId.value);
+        if(this.userform.controls.LoginEmailId.value == "adminaccess@gmail.com" && this.userform.controls.LoginPassword.value == "adminaccess" )
+        {
+          console.log("admin area");
+          window.localStorage.setItem("user-token", data); 
+        }
         alert("Your login is successfull!!!")
+        this.service.isLogedIn(true);
         this.route.navigate(["/mealdb"]);
       }
+      
       else{
         alert("Invalid Credentials..")
       }
