@@ -15,6 +15,8 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { FoodTablesComponent } from './food-tables/food-tables.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { SearchmealbyfirstletterComponent } from './searchmealbyfirstletter/searchmealbyfirstletter.component';
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     IndexComponent,
     FoodListComponent,
     FoodTablesComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    SearchmealbyfirstletterComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

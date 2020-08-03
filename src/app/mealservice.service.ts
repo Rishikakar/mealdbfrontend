@@ -9,43 +9,50 @@ import { map } from 'rxjs/operators';
 export class MealserviceService {
 
   constructor(private http:HttpClient) { }
+  postMeal(data):Observable<any>{
+    return this.http.post("https://mealdbproject.azurewebsites.net/api/meals/AdminInputForMeals",data);
+  }
   login(data):Observable<any>
   {
-    return this.http.post("https://localhost:44391/api/meals/login",data);
+    return this.http.post("https://mealdbproject.azurewebsites.net/api/meals/login",data);
   }
   register(data):Observable<any>
   {
-    return this.http.post("https://localhost:44391/api/Meals/Register",data);
+    return this.http.post("https://mealdbproject.azurewebsites.net/api/Meals/Register",data);
   } 
   meal():Observable<any>
   {
-    return this.http.get("https://localhost:44391/api/meals/latestmeals");
+    return this.http.get("https://mealdbproject.azurewebsites.net/api/meals/latestmeals");
   }
   ingredient():Observable<any>
   {
-    return this.http.get("https://localhost:44391/api/Meals/MainIngredients");
+    return this.http.get("https://mealdbproject.azurewebsites.net/api/Meals/MainIngredients");
   }
   randommeals():Observable<any>
   {
-    return this.http.get("https://localhost:44391/api/meals/randommeals");
+    return this.http.get("https://mealdbproject.azurewebsites.net/api/meals/randommeals");
   }
   countries():Observable<any>
   {
-    return this.http.get("https://localhost:44391/api/meals/countries");
+    return this.http.get("https://mealdbproject.azurewebsites.net/api/meals/countries");
   }
   getSpecificMeals(id ): Observable<any>{
-    return this.http.get("https://localhost:44391/api/meals/MealById"+ '/' + id);
+    return this.http.get("https://mealdbproject.azurewebsites.net/api/meals/MealById"+ '/' + id);
   }
   getMealsByIngredients(id ): Observable<any>{
-    return this.http.get("https://localhost:44391/api/meals/IngredientById"+ '/' + id);
+    return this.http.get("https://mealdbproject.azurewebsites.net/api/meals/IngredientById"+ '/' + id);
   }
   getMealsByCountry(id ): Observable<any>{
-    return this.http.get("https://localhost:44391/api/meals/CountryById"+ '/' + id);
+    return this.http.get("https://mealdbproject.azurewebsites.net/api/meals/CountryById"+ '/' + id);
   }
   searchMeals(data):Observable<any>{
-    return this.http.post("https://localhost:44391/api/Meals/Search",data);
+    return this.http.post("https://mealdbproject.azurewebsites.net/api/Meals/Search",data);
   }
     searching(id ): Observable<any>{
-      return this.http.get("https://localhost:44391/api/Meals/searching"+ '/' + id);
+      return this.http.get("https://mealdbproject.azurewebsites.net/api/Meals/searching"+ '/' + id);
+    }
+   
+    searchings(id ): Observable<any>{
+      return this.http.get("https://mealdbproject.azurewebsites.net/api/meals/searchingbyletter"+ '/' + id);
     }
   }

@@ -8,6 +8,7 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CountriesComponent } from './countries/countries.component';
 import { IndexComponent } from './index/index.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { SearchmealbyfirstletterComponent } from './searchmealbyfirstletter/searchmealbyfirstletter.component';
 
 
 const routes: Routes = [
@@ -60,7 +61,18 @@ const routes: Routes = [
   {
     path:"mealdb/searchlist/:id",
     component:SearchbarComponent
+  },
+  {
+    path:'mealdb/searchlist/:id/mealdb/recipies/:id', redirectTo:'mealdb/recipies/:id',pathMatch:'full'
+  },
+  {
+    path:"mealdb/searchlistbyletter/:id",
+    component:SearchmealbyfirstletterComponent
+  },
+  {
+    path:'mealdb/searchlistbyletter/:id/mealdb/recipies/:id', redirectTo:'mealdb/recipies/:id',pathMatch:'full'
   }
+  
   
 ];
 

@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="main-block">
+
+    <form [formGroup]="adminform">
+
+
+    </form>
+    <h1>Meal Posting Form</h1>
+    <form [formGroup]="adminformformeals">
+        <input class="fname" type="text" name="MealName" formControlName="MealName" placeholder="Enter the MealName">
+        <input class="fname" type="url" name="MealImageUrl" formControlName="MealImageUrl" placeholder="Enter the MealImageUrl"><br>
+        <input class="fname" type="text" name="MealDescription" formControlName="MealDescription" placeholder="Enter the MealDescription"><br>
+        <input type="text" name="SubIngredientOne" formControlName="SubIngredientOne" placeholder="Enter the SubIngredientOne">
+        <input type="url" name="SubIngredientOneUrl" formControlName="SubIngredientOneUrl" placeholder="Enter the SubIngredientOneUrl">
+        <input type="text" name="SubIngredientTwo" formControlName="SubIngredientTwo" placeholder="Enter the SubIngredientTwo">
+        <input type="url" name="SubIngredientTwoUrl" formControlName="SubIngredientTwoUrl" placeholder="Enter the SubIngredientTwoUrl">
+        <input type="text" name="SubIngredientThree" formControlName="SubIngredientThree" placeholder="Enter the SubIngredientThree">
+        <input type="url" name="SubIngredientThreeUrl" formControlName="SubIngredientThreeUrl" placeholder="Enter the SubIngredientThreeUrl">
+        <input type="text" name="SubIngredientFour" formControlName="SubIngredientFour" placeholder="Enter the SubIngredientFour">
+        <input type="url" name="SubIngredientFourUrl" formControlName="SubIngredientFourUrl" placeholder="Enter the SubIngredientFourUrl">
+        <input type="text" name="SubIngredientFive" formControlName="SubIngredientFive" placeholder="Enter the SubIngredientFive">
+        <input type="url" name="SubIngredientFiveUrl" formControlName="SubIngredientFiveUrl" placeholder="Enter the SubIngredientFiveUrl">
+        <input type="text" name="SubIngredientSix" formControlName="SubIngredientSix" placeholder="Enter the SubIngredientSix">
+        <input type="url" name="SubIngredientSixUrl" formControlName="SubIngredientSixUrl" placeholder="Enter the SubIngredientSixUrl"><br>
+        <input class="fname" type="number" name="CountrysId" formControlName="CountrysId" placeholder="Enter the CountrysId"><br>
+        <input class="fname" type="number" name="MainIngredientsId" formControlName="MainIngredientsId" placeholder="Enter the MainIngredientsId"><br>
+        <button (click)="uploadingmeal()" class="button">Submit</button>&nbsp;
+    </form>
+
+</div>

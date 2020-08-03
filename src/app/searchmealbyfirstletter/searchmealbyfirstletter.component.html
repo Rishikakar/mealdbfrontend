@@ -1,0 +1,16 @@
+<app-header></app-header>
+<hr>
+<div class="container">
+    <div class="center">
+
+        <div class="row" *ngFor="let item of meal">
+            <div class="col-sm-3">
+                <a routerLink="mealdb/recipies/{{item[1]}}"><img src="{{item[3]}}" width="200"> <br> {{item[2]}}
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    <!--/.container-->
+</div>
